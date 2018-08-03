@@ -5,19 +5,18 @@
 		***********************************************************************                                                              			   	
 		* VERSION:          1.0                                          			 
 		*                                                                 				
-		* AUTHOR:           Matthew Peters                               		
-		*                   mpeters@ucsd.edu                           		 
+		* MODIFIED FROM:    Matthew Peters; mpeters@ucsd.edu                           		 
 		*                                                                 				                                                                				
 		* ABOUT:           This file has been created for use with        	
 		*                  EAD output from  ArchivesSpace          		
-		*                  to create output for the UCSD Special Collections & Archives, for the specific purpose
-        *                  of preparing it for ingest into OAC.  It is not designed 	
+		*                  to create output for UCLA Library Special Collections, for the specific purpose of preparing it for ingest into OAC.  It is not designed 	
 		*	           		to be generic and satisfies the specific needs and	
-		*                  processing policies of UCSD/MSCL.  In essence this stylesheet
+		*                  processing policies of UCLA LSC.  In essence this stylesheet
         *                  makes an exact copy of the one it's given but making the following
         *                  changes:
         *
-        *                  *Unitids translated from AT output of MSS.XXXX to MSCL preferred
+        *                  Now:
+	*		   *Unitids translated from AT output of MSS.XXXX to MSCL preferred
         *                    MSS XXXX
         *                  *Removes Mixed materials label in ead:container (note does not remove any
         *                    other labels if they are applied, just 'Mixed materials')
@@ -26,11 +25,17 @@
         *                    named restrictedarks.xml and not copying daos with matching hrefs
         *                  *Changes ead:language @scriptcode to Latn for all finding aids to fix
         *                    inconsistencies where it is sometimes input as 'latn'
+	*		Desired:
+	*			- capitalizing the “c” in creator
+	*			- adding the missing “xlinks” in references on href, show, and actuate attributes
+	*			- swapping the order of <titleproper> tags so that the filing title doesn’t appear as the main title in the OAC
+	*			- swapping the order of <unittitle> and <unitid> (so that <unitid> comes first) in the container lists
+	*			- possibly adding commas to precede dates in container lists
         *
         *                  *PLEASE NOTE THIS IS AN XSL 2.0 STYLESHEET AND MUST BE USED WITH AN
         *                   XSL 2.0 CAPABLE PARSER*
 		*                                                                 				
-		* UPDATED          May 10, 2015                               		 
+		* UPDATED          August, 3 2018                               		 
 		************************************************************************
     -->
 
