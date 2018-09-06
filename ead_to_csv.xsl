@@ -83,10 +83,10 @@
 			</xsl:if>
 		</xsl:variable>
 		<xsl:variable name="box">
-			<xsl:value-of select="ead:did/ead:container[@type='Box']" />
+			<xsl:value-of select="ead:did/ead:container[@type='box']" />
 		</xsl:variable>
 		<xsl:variable name="folder">
-			<xsl:value-of select="ead:did/ead:container[@type='Folder']" />
+			<xsl:value-of select="ead:did/ead:container[@type='folder']" />
 		</xsl:variable>
 		<xsl:variable name="digital_file">
 			<xsl:value-of select="ead:did/ead:container[@type='Digital_file']" />
